@@ -1,0 +1,118 @@
+@import "common";
+@fontsz: 30;
+body {
+    max-width: 750rem / @fontsz;
+    min-width: 320rem / @fontsz;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    background: #f2f2f2;
+}
+// header
+.indexheader {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 750rem / @fontsz;
+    height: 88rem / @fontsz;
+    background-color: #ffc027;
+    .classnav {
+        width: 44rem / @fontsz;
+        height: 70rem / @fontsz;
+        margin: 11rem / @fontsz 25rem / @fontsz 7rem / @fontsz 24rem / @fontsz;
+        background-color: pink;
+        background:  url(../images/classify.png);
+        background-size: 44rem / @fontsz 70rem / @fontsz;
+    }
+    .login { 
+        width: 75rem / @fontsz;
+        height: 70rem / @fontsz;
+        font-size: 25rem / @fontsz;
+        margin: 10rem / @fontsz;
+        text-align: center;
+        line-height: 70rem / @fontsz;
+        color: white;
+    }
+    .searchbar {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        height: 88rem / @fontsz;
+        input {
+            width: 100%;
+            height: 66rem / @fontsz;
+            padding: 1rem / @fontsz 30rem / @fontsz 1rem / @fontsz 55rem / @fontsz;
+            border: 0;
+            border-radius: 66rem / @fontsz;
+            outline: none;
+            font-size: 25rem / @fontsz;
+            background-color: #fff1ce;
+        }
+    }
+}
+// indexbanner
+.indexbanner {
+    height: 368rem / @fontsz;
+    a {
+       display: block;
+       width:100%;
+       height: 368rem / @fontsz;
+       img {
+        width: 100%;
+        } 
+    }
+}
+// indexsale
+.indexsale {
+    width: 750rem / @fontsz;
+    ul {
+        display: flex;
+        li {
+            flex: 1;
+                a {
+                display: block;
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
+// indexnav 
+.indexnav {
+    width: 750rem / @fontsz;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        li {
+            flex: 20%;
+            height: 140rem / @fontsz;
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 140rem / @fontsz;
+                img {
+                    flex: 1;
+                    width: 82rem / @fontsz;
+                    height: 82rem / @fontsz;
+                    margin: 10rem / @fontsz 0 15rem / @fontsz; 
+                }
+                span {
+                    flex: 1;
+                    font-size: 25rem / @fontsz;
+                    color: #333333;
+                }
+            }
+        }
+    }
+}
