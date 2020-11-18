@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>黑馬面面</title>
+    <link rel="stylesheet" href="./css/swiper.css">
     <link rel="stylesheet" href="./css/bass.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -44,45 +45,59 @@
                 <a href="#" class="more">更多>></a>
             </div>
             <div class="jobdirect_bd">
-                <div class="bannerbox">
-                    <a href="#" class="lefticon"><span></span></a>
-                    <div class="bannerpic_no1"><a href="#"><img src="./upload/pic.png" alt=""></a></div>
-                    <div class="bannerpic_no2"><a href="#"><img src="./upload/bn2.png" alt=""></a></div>
-                    <div class="bannerpic_no3"><a href="#"><img src="./upload/bn3.png" alt=""></a></div>
-                    <a href="#" class="righticon"><span></span></a>
+                <!-- Swiper -->
+                <div class="swiper-container jbc_content">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href=""><img src="./upload/pic.png" alt=""></a>
+                            <p>老師教你應對面試技巧</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href=""><img src="./upload/pic.png" alt=""></a>
+                            <p>老師教你應對面試技巧</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href=""><img src="./upload/pic.png" alt=""></a>
+                            <p>老師教你應對面試技巧</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="word">老師教應對面試技巧</p>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-        </div>
-        <!-- jobdirect end -->
+            <!-- jobdirect end -->
+
     </section>
     <section class="indexwrap_3">
         <!-- learn start -->
         <div class="learn_hd">
             <div class="title">充電學習</div>
-            <a href="#" class="more">更多</a>
+            <a href="#" class="more">更多>></a>
         </div>
         <div class="learn_bd">
-            <div class="learn_goods_1">
-                <a href="#">
-                    <div class="pic"><img src="./upload/pic1.png" alt=""></div>
-                    <p class="goods_content">說道地英文，告別中式英文</p>
-                    <span class="people_1">156</span><span class="people_2">人學習</span>
-                </a>
-            </div>
-            <div class="learn_goods_2">
-                <a href="#">
-                    <div class="pic"><img src="./upload/pic2.jpg" alt=""></div>
-                    <p class="goods_content">思維攻略金字塔思維提升寫作能力</p>
-                    <span class="people_1">156</span><span class="people_2">人學習</span>
-                </a>
-            </div>
-            <div class="learn_goods_3">
-                <a href="#">
-                    <div class="pic"><img src="./upload/pic2.jpg" alt=""></div>
-                    <p class="goods_content">Xmind零基礎也能快速掌握重點學習</p>
-                    <span class="people_1">156</span><span class="people_2">人學習</span>
-                </a>
+            <!-- Swiper -->
+            <div class="swiper-container learn_content">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img src="./upload/pic1.png" alt="">
+                            <h4>說道地英語，道別中式英文</h4><span class="people_1">156</span><span class="people_2">人學習</span>
+                        </a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./upload/pic2.png" alt="">
+                            <h4>說道地英語，道別中式英文</h4><span class="people_1">156</span><span class="people_2">人學習</span>
+                        </a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./upload/pic1.png" alt="">
+                            <h4>說道地英語，道別中式英文</h4><span class="people_1">156</span><span class="people_2">人學習</span>
+                        </a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./upload/pic1.png" alt="">
+                            <h4>說道地英語，道別中式英文</h4><span class="people_1">156</span><span class="people_2">人學習</span>
+                        </a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./upload/pic1.png" alt="">
+                            <h4>說道地英語，道別中式英文</h4><span class="people_1">156</span><span class="people_2">人學習</span>
+                        </a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./upload/pic1.png" alt="">
+                            <h4>說道地英語，道別中式英文</h4><span class="people_1">156</span><span class="people_2">人學習</span>
+                        </a></div>
+
+                </div>
             </div>
         </div>
         <!-- learn end -->
@@ -90,7 +105,8 @@
     <!-- footer start -->
     <section class="footer">
         <ul>
-            <li class="footer_home"><a href=""><span class="pic_home"></span><span class="word">首頁</span></a></li>
+            <li class="footer_home"><a href=""><span class="pic_home"></span><span class="word wordcolor">首頁</span></a>
+            </li>
             <li class="footer_interview"><a href=""><span class="pic_interview"></span><span
                         class="word">技術面試</span></a></li>
             <li><a href="footer_similatinterview"><span class="pic_similatinterview"></span><span
@@ -100,6 +116,29 @@
     </section>
     <!-- footer end -->
     <script src="./js/flexible.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        // 第一個banner
+        (function () {
+            var swiper = new Swiper('.jbc_content', {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                centeredSlides: true,
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        })();
+        // 第二個banner
+        (function () {
+            var swiper = new Swiper('.learn_content', {
+                slidesPerView: 2.3,
+                spaceBetween: 20,
+            });
+        })();
+    </script>
 </body>
 
 </html>
